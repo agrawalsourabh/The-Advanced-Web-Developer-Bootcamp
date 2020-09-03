@@ -1,5 +1,14 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
 body {
     background-color: beige;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
 }
 
 .box {
@@ -41,4 +50,101 @@ body {
 .animated_timing_func {
     transition-duration: 0.6s;
     transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+
+/* chapter - 24 */
+
+div.item {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 10px 1%;
+    min-width: 220px;
+    max-width: 310px;
+    width: 100%;
+    background: #000000;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+div.item i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    font-size: 34px;
+    color: #000000;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    background: #ffffff;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+div.item * {
+    box-sizing: border-box;
+    transition: all .35s ease-in-out;
+}
+
+div.red {
+    background-color: red;
+}
+
+div.green {
+    background-color: green;
+}
+
+div.blue {
+    background-color: blue;
+}
+
+img {
+    width: 100%;
+}
+
+div.item:hover {
+    cursor: pointer;
+}
+
+div.item:hover img {
+    opacity: 0.5;
+    filter: grayscale(100%);
+}
+
+div.item:hover i {
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 300ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+/* chapter 26 */
+
+@keyframes rainbowtext {
+    0% {
+        color: red;
+        font-size: 20px;
+    }
+    25% {
+        color: orange
+    }
+    50% {
+        color: yellow;
+        font-size: 40px;
+    }
+    75% {
+        color: green;
+    }
+    100% {
+        color: blue;
+        font-size: 20px;
+    }
+}
+
+.keyframes1_p {
+    animation: rainbowtext;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
 }
