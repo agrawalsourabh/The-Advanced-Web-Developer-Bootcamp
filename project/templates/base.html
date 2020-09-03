@@ -1,0 +1,21 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="{{url_for('static', filename='js/script.js')}}"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>The Advanced Web Developer Bootcamp</h1>
+        <a href="/">Index Page</a> {% block content %}{% endblock %}
+    </div>
+
+</body>
+
+</html>
