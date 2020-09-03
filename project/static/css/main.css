@@ -22,3 +22,23 @@ body {
     transform: scale(2) rotate(135deg);
     border-radius: 50%;
 }
+
+
+/* Chpater-21 */
+
+.trans_box {
+    background-color: brown;
+    width: 100px;
+    height: 100px;
+    color: white;
+    text-align: center;
+}
+
+.trans_box:hover {
+    transform: translateX(300px);
+}
+
+.animated_timing_func {
+    transition-duration: 0.6s;
+    transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
