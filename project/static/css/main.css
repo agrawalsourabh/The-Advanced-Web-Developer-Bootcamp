@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:200');
 body {
     background-color: beige;
+    font-family: raleway;
 }
 
 .flex-container {
@@ -261,4 +262,48 @@ div.item:hover i {
 .sidebar-item {
     padding: 5px;
     color: white;
+}
+
+
+/* Chapter 43 */
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav>a.navbar_link {
+    text-decoration: none;
+    font-size: 25px;
+    margin: 15px;
+    color: #08382b;
+    border-bottom-color: teal;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+}
+
+nav>a.navbar_link:hover {
+    transform: scale(1.1);
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in;
+    color: #5bc7c7;
+}
+
+nav>a.navbar_link>i {
+    margin-right: 10px;
+}
+
+@media screen and (max-width:920px) {
+    nav {
+        justify-content: space-around;
+    }
+    nav>a.navbar_link {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    nav {
+        flex-direction: column;
+    }
 }
