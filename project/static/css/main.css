@@ -161,15 +161,36 @@ div.item:hover i {
     animation-timing-function: linear;
     animation-duration: 3s;
     animation-iteration-count: infinite;
+    animation-delay: 1s;
 }
 
 .sun {
-    position: absolute;
+    position: relative;
     width: 150px;
     height: 150px;
     border-radius: 50%;
     background-color: orange;
     top: 70%;
+    /* animation */
+    animation-name: sunanimation;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes sunanimation {
+    0% {
+        transform: translate(0, 50px);
+    }
+    50% {
+        transform: translate(600px, -350px);
+        background-color: yellow;
+    }
+    100% {
+        transform: translate(1200px, 50px);
+        background-color: red;
+    }
 }
 
 @keyframes skyanimation {
@@ -190,5 +211,35 @@ div.item:hover i {
     }
     100% {
         background-color: rgb(46, 45, 45);
+    }
+}
+
+
+/* chapter 31 */
+
+.loader {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border: 16px solid #c8e6d0;
+    border-top-color: #4c9c61;
+    border-bottom-color: #51c9c1;
+    border-radius: 50%;
+    /* animation */
+    animation-name: loaderanimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes loaderanimation {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(180deg) scale(1.1);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
     }
 }
