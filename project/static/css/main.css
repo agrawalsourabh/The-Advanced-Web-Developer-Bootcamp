@@ -243,3 +243,22 @@ div.item:hover i {
         transform: rotate(360deg) scale(1);
     }
 }
+
+
+/* chapter 39 */
+
+.flex-sidebar-container {
+    position: relative;
+    width: 20%;
+    height: 83%;
+    display: flex;
+    background-color: #4e4a5c;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.sidebar-item {
+    padding: 5px;
+    color: white;
+}
