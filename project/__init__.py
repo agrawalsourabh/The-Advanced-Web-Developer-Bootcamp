@@ -30,3 +30,6 @@ app.register_blueprint(chap43, url_prefix="/chap43")
 
 from project.Chapter50.views import chap50
 app.register_blueprint(chap50, url_prefix="/chap50")
+
+from project.Chapter55.views import chap55
+app.register_blueprint(chap55, url_prefix='/chap55')

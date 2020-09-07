@@ -1,0 +1,318 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    html {
+        color: #555;
+    }
+    
+    body {
+        font-family: 'Montserrat';
+    }
+    
+    a {
+        text-decoration: none;
+        color: white
+    }
+    
+    a.btn {
+        border-radius: 4px;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-align: center;
+        background-color: #3f51b5;
+        opacity: 1;
+        color: white;
+    }
+    
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 100px 80px;
+    }
+    
+    section:not(.hero):nth-child(even) {
+        background-color: #f5f5f5;
+    }
+    
+    @media screen and (max-width: 800px) {
+        section {
+            padding: 50px 20px;
+        }
+    }
+    
+    header {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 35px 100px 0;
+        opacity: 0;
+        color: white;
+        /* animations */
+        animation: 1s fadein 0.5 ease-out forwards;
+    }
+    
+    @media screen and (max-width: 800px) {
+        header {
+            padding: 20px 50px;
+            flex-direction: column;
+        }
+        header h2 {
+            margin-bottom: 15px;
+        }
+    }
+    
+    @keyframes fadein {
+        100% {
+            opacity: 100;
+        }
+    }
+    
+    ul,
+    nav {
+        list-style: none;
+        display: flex;
+    }
+    
+    nav>li {
+        margin: 10px;
+    }
+    
+    .hero {
+        position: relative;
+        text-align: center;
+        justify-content: center;
+        min-height: 100vh;
+        color: white;
+    }
+    
+    .hero .background-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        z-index: -1;
+        background-color: rgb(172, 166, 168);
+    }
+    
+    .hero h1 {
+        font-size: 60px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    
+    .hero h3 {
+        font-size: 20px;
+        font-weight: lighter;
+        margin-bottom: 40px;
+    }
+    
+    .hero-content-area>a.btn {
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    .hero-content-area {
+        margin-top: 100px;
+        opacity: 0;
+        animation: slidefade 1s linear 0.5 forwards;
+    }
+    
+    @keyframes slidefade {
+        100% {
+            opacity: 100;
+            margin-top: 0;
+        }
+    }
+    
+    .grid {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    hr {
+        width: 250px;
+        height: 3px;
+        background-color: tomato;
+        border: 0;
+        margin-bottom: 50px;
+    }
+    
+    section h3.title {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 30px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    section p {
+        max-width: 750px;
+        line-height: 2;
+        padding: 0 20px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    @media screen and (max-width: 800px) {
+        .hero {
+            min-width: 600px;
+        }
+        .hero h1 {
+            font-size: 48px;
+        }
+        .hero h3 {
+            font-size: 24px;
+        }
+        .hero a.btn {
+            padding: 15px 40px;
+        }
+    }
+    /* Destination section */
+    
+    .destinations .grid>li {
+        width: 320px;
+        height: 300px;
+        padding: 20px;
+        background-clip: content-box;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .destinations .grid li.small {
+        flex-basis: 30%;
+    }
+    
+    .destinations .grid li.large {
+        flex-basis: 70%;
+    }
+    
+    @media screen and (max-width: 1100px) {
+        .destinations .grid li.small,
+        .destinations .grid li.large {
+            flex-basis: 50%;
+        }
+    }
+    
+    @media screen and (max-width: 800px) {
+        .destinations .grid li.small,
+        .destinations .grid li.large {
+            flex-basis: 100%;
+        }
+    }
+    /* Packages Section */
+    
+    .packages .grid li {
+        padding: 20px;
+        flex-basis: 50%;
+        text-align: center;
+    }
+    
+    .packages .grid li i {
+        color: tomato;
+    }
+    
+    .packages .grid li h4 {
+        margin: 25px 0;
+        font-size: 30px;
+    }
+    
+    @media screen and (max-width: 800px) {
+        .packages .grid li {
+            flex-basis: 100%;
+            padding: 20px;
+        }
+    }
+    /* Testimonials Section */
+    
+    .testimonials .quote {
+        font-size: 22px;
+        line-height: 1.5;
+    }
+    
+    .testimonials .author {
+        font-weight: bold;
+    }
+    
+    @media screen and (max-width: 800px) {
+        .testimonials .quote {
+            font-size: 18px;
+            margin: 15px 0;
+        }
+        .testimonials .author {
+            font-size: 14px;
+        }
+    }
+    /* Contact Section */
+    
+    .contact form {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 60%;
+    }
+    
+    .contact form input {
+        padding: 15px;
+        margin-right: 30px;
+        font-size: 18px;
+        color: #555;
+        flex: 1;
+    }
+    
+    .contact form .btn {
+        padding: 18px 42px;
+    }
+    
+    @media screen and (max-width:1000px) {
+        .contact form input {
+            flex-basis: 100%;
+            margin: 0 0 20px 0;
+        }
+    }
+    /* footer section */
+    
+    footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        color: white;
+        background-color: #607d8b;
+        padding: 20px 0;
+    }
+    
+    footer ul {
+        display: flex;
+    }
+    
+    footer ul li {
+        margin-left: 12px;
+        margin-right: 5px;
+    }
+    
+    footer p {
+        text-transform: uppercase;
+        font-size: 14px;
+        opacity: 0.6;
+        align-self: center;
+        margin-left: 16px;
+    }
+    
+    @media screen and (max-width: 1100px) {
+        footer {
+            flex-direction: column;
+        }
+        footer p {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
