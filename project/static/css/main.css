@@ -13,6 +13,24 @@ h3 {
     color: #2f8282;
 }
 
+.btn {
+    width: 200px;
+    padding: 10px 15px;
+    background-color: teal;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid teal;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    transition-delay: 0.1s;
+    transition-timing-function: linear;
+    cursor: pointer;
+}
+
 a:hover h3 {
     transform: scale(1.01);
     transition-timing-function: ease-in;
@@ -44,6 +62,18 @@ a:hover h3 {
     justify-content: center;
     align-content: center;
     align-items: center;
+}
+
+.flex-img-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flex-bitcoin-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .box {
@@ -411,4 +441,35 @@ nav>a.navbar_link>i {
     .custom-nav>a>h1 {
         font-size: 15px;
     }
+}
+
+
+/* Chapter 76 */
+
+.dog_img {
+    align-self: center;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.flex-img-container .btn {
+    align-self: center;
+}
+
+
+/* chapter 77 */
+
+.flex-bitcoin-container p {
+    align-self: center;
+    font-size: 30px;
+}
+
+.flex-bitcoin-container .btn {
+    align-self: center;
+}
+
+span#bitcoin-price {
+    color: teal;
+    font-weight: bolder;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
