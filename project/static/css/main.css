@@ -473,3 +473,91 @@ span#bitcoin-price {
     font-weight: bolder;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+
+/* chapter 81 */
+
+.avatar {
+    width: 100%;
+    max-width: 400px;
+    align-self: center;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+#find-clot {
+    align-self: center;
+}
+
+#status {
+    align-self: center;
+    color: red;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+
+/* chapter 82 */
+
+.usercard {
+    width: 500px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.usercard .userdetails {
+    flex-basis: 86%;
+    display: flex;
+}
+
+.user-avatar {
+    flex-basis: 35%;
+    display: flex;
+    justify-content: center;
+}
+
+.avatar {
+    width: 100%;
+    align-self: center;
+    border: 1px black solid;
+    border-radius: 50%;
+}
+
+.user-other-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.user-other-details p {
+    margin-left: 20px;
+}
+
+.user-other-details p#name {
+    color: teal;
+    font-weight: bolder;
+}
+
+.user-other-details p#title {
+    color: teal;
+    font-weight: bold;
+}
+
+.user-other-details p#email {
+    color: darkgray;
+    font-size: 12px;
+}
+
+.user-other-details p#city {
+    color: darkgray;
+    font-size: 12px;
+}
+
+#next-user {
+    width: 100%;
+}

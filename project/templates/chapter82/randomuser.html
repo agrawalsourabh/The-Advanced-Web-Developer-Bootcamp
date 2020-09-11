@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% block content %}
+
+<h3>Chapter - 82 Random User Generator </h3>
+
+<div class="flex-container">
+    <div class="usercard">
+        <div class="userdetails">
+            <div class="user-avatar">
+                <image class="avatar" id="profile_avatar"></image>
+            </div>
+            <div class="user-other-details">
+                <div class="name-div">
+                    <p id="name">Full Name</p>
+                    <p id="title">Title</p>
+                </div>
+                <div class="contact-div">
+                    <p id="email">Email</p>
+                    <p id="city">City</p>
+                </div>
+            </div>
+        </div>
+        <button class="btn" id="next-user" onclick="randomUser()">Next User!</button>
+
+    </div>
+</div>
+
+{% endblock %}
