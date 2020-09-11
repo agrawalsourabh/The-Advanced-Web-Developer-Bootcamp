@@ -126,3 +126,20 @@ function randomUser() {
             console.log(error)
         })
 }
+
+
+$(document).ready(function() {
+    var cat_url = "https://api.thecatapi.com/v1/images/search";
+    $("#randomCatBtn").click(function() {
+
+
+        $.ajax({
+                method: "GET",
+                url: cat_url
+            })
+            .done(function(msg) {
+                var cat_img_url = msg[0].url
+                $('#cat_photo').attr('src', cat_img_url)
+            });
+    });
+});
